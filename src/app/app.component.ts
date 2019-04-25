@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularWithSpring';
+  title = 'Angular Spring Boot';
+  message = 'Welcome to Angular Spring Boot';
 }
