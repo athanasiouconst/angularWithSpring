@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {BasicAuthenticationService} from '../service/basic-authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -14,10 +15,10 @@ export class LoginComponent implements OnInit {
   errorMessage = 'Invalid Credentials';
   invalidLogin = false;
 
-  //Router
-  //Dependency Injection
+  // Router
+  // Dependency Injection
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private basicAuthenticationService: BasicAuthenticationService) {
   }
 
   ngOnInit() {
@@ -27,13 +28,20 @@ export class LoginComponent implements OnInit {
     // console.log(this.username);
     // console.log(this.password);
 
-    if (this.username === 'costas' && this.password === '1234') {
+    if (this.basicAuthenticationService.authedicate(this.username, this.password)) {
       this.invalidLogin = false;
       // redirect to welcome page
       this.router.navigate(['welcome', this.username]);
     } else {
       this.invalidLogin = true;
     }
-
   }
+
+  // if (this.username === 'costas' && this.password === '1234') {
+  //   this.invalidLogin = false;
+  //   // redirect to welcome page
+  //   this.router.navigate(['welcome', this.username]);
+  // } else {
+  //   this.invalidLogin = true;
+  // }
 }
