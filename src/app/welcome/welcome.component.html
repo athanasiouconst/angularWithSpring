@@ -5,3 +5,15 @@
   <p>You can manage Cars <a routerLink="/cars">here</a></p>
 
 </div>
+<div class="container">
+  You can get message from spring boot App with Rest Service
+  <button (click)="getWelcomeMessage()" class="btn btn-success">Get Message</button>
+</div>
+
+<div class="container">
+  You can get message customized messagefrom spring boot App with Rest Service
+  <button (click)="getWelcomeCustomMessage()" class="btn btn-success">Get Customized Message</button>
+  <p class="alert">{{welcomeMessageFromService}}</p>
+
+</div>
+
