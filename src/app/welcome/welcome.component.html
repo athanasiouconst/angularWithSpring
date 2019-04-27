@@ -1,8 +1,8 @@
-<h1>Welcome</h1>
+<h1>Welcome {{name}}</h1>
 <div class="container">
-  <p> {{name}} to our Spring boot App with Angular </p>
+  <p>  to our Spring boot App with Angular </p>
 
-  <p>You can manage Cars <a routerLink="/cars">here</a></p>
+  <p>You can manage Cars (from angular) <a routerLink="/carsAngular">here</a></p>
 
 </div>
 <div class="container">
@@ -13,7 +13,7 @@
 <div class="container">
   You can get message customized messagefrom spring boot App with Rest Service
   <button (click)="getWelcomeCustomMessage()" class="btn btn-success">Get Customized Message</button>
-  <p class="alert">{{welcomeMessageFromService}}</p>
+  <h6>{{welcomeMessageFromService}}</h6>
 
 </div>
 

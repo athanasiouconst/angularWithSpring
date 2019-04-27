@@ -5,7 +5,8 @@
 
     <ul class="navbar-nav">
       <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/welcome/costas" class="nav-link">Home</a></li>
-      <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/cars" class="nav-link">Cars</a></li>
+      <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/carsAngular" class="nav-link">Cars (from angular)</a></li>
+      <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/cars" class="nav-link">Cars (from Spring Boot)</a></li>
 
       <!--      <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome/in28minutes" class="nav-link">Home</a></li>-->
 <!--      <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/todos" class="nav-link">Todos</a></li>-->
