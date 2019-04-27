@@ -2,6 +2,8 @@
 
 <div class="container">
 
+  <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
   <table class="table">
     <thead>
     <th>Id</th>
@@ -10,6 +12,8 @@
     <th>Model</th>
     <th>is Done</th>
     <th>Date</th>
+    <th>Update</th>
+    <th>Delete</th>
     </thead>
     <tbody>
     <tr *ngFor="let car of cars">
@@ -19,6 +23,8 @@
       <td>{{car.model}}</td>
       <td>{{car.done}}</td>
       <td>{{car.targetDate | date}}</td>
+      <td><button (click)="updateCar(car.id)" class="btn btn-success">Update</button></td>
+      <td><button (click)="deleteCar(car.id)" class="btn btn-danger">Delete</button></td>
     </tr>
     </tbody>
   </table>

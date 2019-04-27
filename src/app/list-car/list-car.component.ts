@@ -11,19 +11,44 @@ import {CarsDataService} from '../service/data/cars-data.service';
 export class ListCarComponent implements OnInit {
 
   cars = [];
+  message: string ;
 
   constructor(private carService: CarsDataService,
               private router: Router) {
   }
-
   ngOnInit() {
+    this.refreshCars();
+  }
+
+  refreshCars(){
     this.carService.retrieveAllCars('costas').subscribe(
       response => {
         console.log(response);
         this.cars = response;
       }
-    );
+    )
+  }
 
+
+
+  deleteCar(id) {
+    console.log(`delete car ${id}` )
+    this.carService.deleteCar('costas', id).subscribe (
+      response => {
+        console.log(response);
+        this.message = `Delete of Car ${id} Successful!`;
+        this.refreshCars();
+      }
+    )
+  }
+
+  updateCar(id) {
+    console.log(`update ${id}`)
+    this.router.navigate(['cars',id])
+  }
+
+  addCar() {
+    this.router.navigate(['cars',-1])
   }
 
 }
