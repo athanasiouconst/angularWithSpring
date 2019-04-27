@@ -6,12 +6,14 @@ import {ErrorComponent} from './error/error.component';
 import {ListCarComponent} from './list-car/list-car.component';
 import {LogoutComponent} from './logout/logout.component';
 import {RouteGuardService} from './service/route-guard.service';
+import {ListCarAngularComponent} from './list-car-angular/list-car-angular.component';
 
 
 const routes: Routes = [
   {path: '', component: LoginComponent}, // canActivate, RouteGuardService
   {path: 'login', component: LoginComponent},
   {path: 'welcome/:name', component: WelcomeComponent, canActivate: [RouteGuardService]},
+  {path: 'carsAngular', component: ListCarAngularComponent, canActivate: [RouteGuardService]},
   {path: 'cars', component: ListCarComponent, canActivate: [RouteGuardService]},
   {path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService]},
   {path: '**', component: ErrorComponent}
