@@ -31,7 +31,7 @@ export class CarsDataService {
 
   createCar(username, car){
     return this.http.post(
-      `http://localhost:8080/users/users/${username}/cars`
+      `http://localhost:8080/users/${username}/cars`
       , car);
   }
 

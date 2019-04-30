@@ -35,7 +35,7 @@ export class CarComponent implements OnInit {
   }
 
   saveCar() {
-    if (this.id == -1) { //=== ==
+    if (this.id === -1) {
       this.carService.createCar('costas', this.car)
         .subscribe(
           data => {
