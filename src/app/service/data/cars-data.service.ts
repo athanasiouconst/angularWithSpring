@@ -23,16 +23,16 @@ export class CarsDataService {
     return this.http.get<Car>(`http://localhost:8080/users/${username}/cars/${id}`);
   }
 
-  updateCar(username, id, todo){
+  updateCar(username, id, car){
     return this.http.put(
       `http://localhost:8080/users/${username}/cars/${id}`
-      , todo);
+      , car);
   }
 
-  createCar(username, todo){
+  createCar(username, car){
     return this.http.post(
       `http://localhost:8080/users/users/${username}/cars`
-      , todo);
+      , car);
   }
 
 }

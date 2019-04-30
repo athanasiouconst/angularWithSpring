@@ -13,6 +13,7 @@ import {FooterComponent} from './footer/footer.component';
 import {LogoutComponent} from './logout/logout.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ListCarAngularComponent } from './list-car-angular/list-car-angular.component';
+import { CarComponent } from './car/car.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ListCarAngularComponent } from './list-car-angular/list-car-angular.com
     MenuComponent,
     FooterComponent,
     LogoutComponent,
-    ListCarAngularComponent
+    ListCarAngularComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,

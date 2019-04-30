@@ -32,7 +32,7 @@ export class ListCarComponent implements OnInit {
 
 
   deleteCar(id) {
-    console.log(`delete car ${id}` )
+    console.log(`delete car ${id}` );
     this.carService.deleteCar('costas', id).subscribe (
       response => {
         console.log(response);
@@ -43,7 +43,7 @@ export class ListCarComponent implements OnInit {
   }
 
   updateCar(id) {
-    console.log(`update ${id}`)
+    console.log(`update ${id}`);
     this.router.navigate(['cars',id])
   }
 
